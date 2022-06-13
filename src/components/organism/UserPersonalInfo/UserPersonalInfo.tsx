@@ -1,6 +1,8 @@
 import React from 'react'
+// components
 import NickContainer from '../../molecules/NickContainer/NickContainer'
-
+// styles
+import "./UserPersonalInfo.css"
 const UserPersonalInfo: React.FC = () => {
     return (
         <section>
@@ -9,7 +11,7 @@ const UserPersonalInfo: React.FC = () => {
                 fullName='Luis Molina'
                 nickName='luisMm24'
             />
-            <p>"Hi, my name is Luis, im 22 years old.\r\nI'm a front end developer and I love playing the guitar and videogames."</p>
+            <p className='userBio'>"Hi, my name is Luis, im 22 years old.I'm a front end developer and I love playing the guitar and videogames."</p>
         </section>
     )
 }

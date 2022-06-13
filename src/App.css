@@ -16,6 +16,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+header{
+  background-color: var(--header-bg-color);
+  padding:1em;
+}
+header img{
+  margin:0 auto;
+}
+
+.AppBodySection{
+  max-width: 1250px;
+  margin:0 auto;
+  padding:1em;
+}
+
 /* GLOBAL CLASSES */
 
 .grayText{
