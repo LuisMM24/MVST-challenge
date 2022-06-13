@@ -4,7 +4,7 @@ interface Props {
     handleClick?: () => void
     type: "button" | "submit",
     className?: string,
-    children: JSX.Element | string | string[]
+    children: JSX.Element | JSX.Element[] | string | string[]
 }
 
 const PrimaryButton: React.FC<Props> = ({

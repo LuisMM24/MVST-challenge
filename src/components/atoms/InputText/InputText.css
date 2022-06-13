@@ -1,0 +1,10 @@
+.inputText{
+    width:100%;
+    border-radius: 0.25em;
+    background-color: inherit;
+    color:white;
+    border-color: #30363d;
+    outline: none;
+    border-style:solid;
+    padding: 0.25em 1em;
+}

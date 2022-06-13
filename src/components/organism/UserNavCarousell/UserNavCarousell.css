@@ -5,13 +5,11 @@
 .userNavWrapper ul{
     display: flex;
     list-style: none;
-    
     padding:0.5em 0;
     overflow:auto;
 }
 .userNavWrapper li{
-    
-    padding:1em 0.5em 
+    padding:0.5em 
 }
 .userNavWrapper a:hover{
     background-color:#2e3642
@@ -20,7 +18,7 @@
     border-bottom: 2px solid #f78166;
 }
 .userNavWrapper a{
-    padding:1em 0.5em ;
+    padding:0.5em ;
     cursor:pointer;
     border-radius:1em;
     text-decoration: none;
