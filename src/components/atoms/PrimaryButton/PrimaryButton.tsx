@@ -1,8 +1,26 @@
 import React from 'react'
+import "./PrimaryButton.css"
+interface Props {
+    handleClick?: () => void
+    type: "button" | "submit",
+    className?: string,
+    children: JSX.Element | string | string[]
+}
 
-const PrimaryButton: React.FC = () => {
+const PrimaryButton: React.FC<Props> = ({
+    handleClick,
+    type,
+    className,
+    children
+}) => {
     return (
-        <div>PrimaryButton</div>
+        <button
+            type={type}
+            className={`primaryButton ${className}`}
+            onClick={handleClick}
+        >
+            {children}
+        </button>
     )
 }
 
