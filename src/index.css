@@ -1,20 +1,3 @@
-/* Color variables */
-:root{
-  --main-bg-color:#161b22;
-  --main-text-color:#f0f6fc;
-  --secondary-text-color:#7c858e;
-}
-/* Spline Sans Mono font  */
-@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@400;600&display=swap');
-
-body {
-  background-color: var(--main-bg-color);
-  color:var(--main-text-color);
-  font-family: 'Spline Sans Mono', monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 
 /* CSS RESET */
 /* Box sizing rules */
