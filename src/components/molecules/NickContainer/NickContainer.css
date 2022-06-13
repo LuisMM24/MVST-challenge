@@ -5,9 +5,14 @@
     gap:1em;
 }
 .avatarWrapper{
+    aspect-ratio: 1/1;
     max-width:15%;
     border-radius: 100px;
     overflow: hidden;
+}
+.avatarWrapper img{
+    object-fit: contain;
+    width:100%;
 }
 .userNamesWrapper{
     font-size:1.5rem;
