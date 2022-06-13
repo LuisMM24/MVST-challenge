@@ -2,6 +2,7 @@
 :root{
   --main-bg-color:#0d1117;
   --header-bg-color:#161b22;
+  --separator-bg-color:#21262d;
   --main-text-color:#f0f6fc;
   --secondary-text-color:#7c858e;
 }
@@ -28,6 +29,11 @@ header img{
   max-width: 1250px;
   margin:0 auto;
   padding:1em;
+}
+
+hr{
+  margin-top: 0;
+ border:1px solid var(--separator-bg-color);
 }
 
 /* GLOBAL CLASSES */
