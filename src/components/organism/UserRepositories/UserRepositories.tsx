@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 // components
 import PrimaryButton from '../../atoms/PrimaryButton/PrimaryButton'
+import InputText from '../../atoms/InputText/InputText'
+import RepositoryCard from '../../molecules/RepositoryCard/RepositoryCard'
+// context
+import { UserProfileContext } from '../../../context/UserProfileContext'
+// custom hook
+import useFetchUserProfile from '../../../hooks/useFetchUserProfile'
 // styles
 import "./UserRepositories.css"
 // icons
 import bookIcon from "../../../assets/img/book.svg"
-import InputText from '../../atoms/InputText/InputText'
-import RepositoryCard from '../../molecules/RepositoryCard/RepositoryCard'
 
 const UserRepositories: React.FC = () => {
     const [inputSearchValue, setInputSearchValue] = useState<string>("")
+    const userProfile = useContext(UserProfileContext)
+    const [repos, isLoading, error] = useFetchUserProfile<IUserRepository[]>(`/${userProfile?.login}/repos`)
     const handleFilter = (
         e: React.ChangeEvent<HTMLInputElement>
     ) => {
@@ -31,13 +37,21 @@ const UserRepositories: React.FC = () => {
                     />
                 </div>
             </div>
-            <section>
-                <RepositoryCard
-                    isPrivateRepo
-                    language='Javascript'
-                    name='MVC'
-                    updateAt='2021-12-13T08:32:29Z'
-                />
+            <section className='reposWrapper'>
+                {(isLoading && <h1>Loading</h1>) || (
+                    (error && <h1>Error</h1>) ||
+                    repos?.map(repo => (
+                        <RepositoryCard
+                            key={repo.id}
+                            isPrivateRepo={repo.private}
+                            language={repo.language}
+                            name={repo.name}
+                            updateAt={repo.updated_at}
+                        />
+                    ))
+                )
+                }
+
             </section>
         </article>
     )

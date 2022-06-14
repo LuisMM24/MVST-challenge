@@ -8,3 +8,11 @@ interface IUserProfile {
     following: number;
     location?: string;
 }
+
+interface IUserRepository {
+    id: number;
+    name: string;
+    private: boolean;
+    language: string;
+    updated_at: string;
+}

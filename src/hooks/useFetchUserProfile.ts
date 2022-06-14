@@ -2,10 +2,8 @@ import { useEffect, useState } from "react"
 
 
 
-const useFetchUserProfile = (userEndpoint: string): [
-    IUserProfile | null, boolean, string | null
-] => {
-    const [userProfile, setUserProfile] = useState<IUserProfile | null>(null)
+const useFetchUserProfile = <T>(userEndpoint: string): [T | null, boolean, string | null] => {
+    const [userProfileItems, setUserProfileItems] = useState<T | null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [error, setError] = useState<string | null>(null)
     useEffect(() => {
@@ -15,7 +13,7 @@ const useFetchUserProfile = (userEndpoint: string): [
             try {
                 const res = await fetch(`https://api.github.com/users${userEndpoint}`)
                 if (!res.ok) throw new Error("Failed to fetch to API")
-                setUserProfile(await res.json())
+                setUserProfileItems(await res.json())
             } catch (e) {
                 if (e instanceof Error) {
                     setError(e.message)
@@ -31,7 +29,7 @@ const useFetchUserProfile = (userEndpoint: string): [
         fetchFirstUser()
     }, [userEndpoint])
 
-    return [userProfile, isLoading, error]
+    return [userProfileItems, isLoading, error]
 }
 
 export default useFetchUserProfile

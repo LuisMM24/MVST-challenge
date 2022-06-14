@@ -10,7 +10,7 @@ interface Props {
 export const UserProfileContext = createContext<IUserProfile | null>(null)
 
 const UserProfileProvider: React.FC<Props> = ({ children }) => {
-    const [userProfile] = useFetchUserProfile("/iigunchev")
+    const [userProfile] = useFetchUserProfile<IUserProfile>("/luismm24")
 
     return (
         <UserProfileContext.Provider value={userProfile}>

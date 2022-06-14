@@ -7,12 +7,12 @@ import "./RepositoryCard.css"
 interface Props {
     name: string;
     isPrivateRepo: boolean;
-    language: string;
+    language: string | null;
     updateAt: string;
 }
 
 const RepositoryCard: React.FC<Props> = ({ name, isPrivateRepo, language, updateAt }) => {
-
+    console.log(language);
     const formatUpdateAt = (date: string): string => {
         const dateFormat = new Date(date)
         const monthString = dateFormat.toLocaleString('ENG', { month: 'short' })
@@ -38,9 +38,9 @@ const RepositoryCard: React.FC<Props> = ({ name, isPrivateRepo, language, update
                         </span>
                     </div>
                     <div className='repoLanguageWrapper'>
-                        <span className='repoLanguage grayText'>
+                        {language && <span className='repoLanguage grayText'>
                             {language}
-                        </span>
+                        </span>}
                         <span className='repoUpdateAt grayText'>
                             {formatUpdateAt(updateAt)}
                         </span>

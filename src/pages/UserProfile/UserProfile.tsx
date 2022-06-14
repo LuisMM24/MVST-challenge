@@ -24,7 +24,7 @@ const UserProfile: React.FC = () => {
                     <hr />
                     <Routes>
                         <Route path="/repositories" element={<UserRepositories />} />
-                        <Route path="/" element={<UserRepositories />} />
+                        <Route path="*" element={<UserRepositories />} />
                     </Routes>
                 </section>
             </UserProfileProvider>
