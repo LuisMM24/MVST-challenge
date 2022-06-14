@@ -1,7 +1,7 @@
 import React from 'react'
 // styles
 import "./InputText.css"
-interface Props {
+export interface Props {
     placeholder?: string;
     className?: string;
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
