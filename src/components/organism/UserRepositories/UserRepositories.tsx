@@ -13,13 +13,25 @@ import "./UserRepositories.css"
 import bookIcon from "../../../assets/img/book.svg"
 
 const UserRepositories: React.FC = () => {
+    /* Search repos value */
     const [inputSearchValue, setInputSearchValue] = useState<string>("")
+    /* User context */
     const userProfile = useContext(UserProfileContext)
+    /* Custom hook  */
     const [repos, isLoading, error] = useFetchUserProfile<IUserRepository[]>(`/${userProfile?.login}/repos`)
+    /* State to filter repos */
+    const [filteredRepos, setFilteredRepos] = useState<IUserRepository[] | null>(null)
+
     const handleFilter = (
         e: React.ChangeEvent<HTMLInputElement>
     ) => {
         setInputSearchValue(e.target.value)
+        if (repos) {
+            /* In this filtering we use lowerCase method to ignore case sensitive */
+            /* Includes method tries to find this input value in the repo array */
+            const reposFound = repos.filter(repo => repo.name.toLowerCase().includes(e.target.value.toLowerCase()))
+            setFilteredRepos([...reposFound])
+        }
     }
 
     return (
@@ -39,8 +51,9 @@ const UserRepositories: React.FC = () => {
             </div>
             <section className='reposWrapper'>
                 {(isLoading && <h1>Loading</h1>) || (
-                    (error && <h1>Error</h1>) ||
-                    repos?.map(repo => (
+                    (error && <h1>{error}</h1>) ||
+                    /* Complex condition, if filteredRepos state is null, map the repos state */
+                    (filteredRepos || repos)?.map(repo => (
                         <RepositoryCard
                             key={repo.id}
                             isPrivateRepo={repo.private}

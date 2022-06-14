@@ -13,7 +13,7 @@
 .repoTitleWrapper{
     display:flex;
     align-items: center;
-    gap:1em; 
+    gap:1em;
 }
 .repoTitleWrapper .repoTitle{
     color:#71b6e6;
@@ -50,6 +50,7 @@
 }
 
 .starWrapper .starButton{
+    width:80px;
     display: flex;
     align-items: center;
     border-radius:0.5em;

@@ -12,7 +12,6 @@ interface Props {
 }
 
 const RepositoryCard: React.FC<Props> = ({ name, isPrivateRepo, language, updateAt }) => {
-    console.log(language);
     const formatUpdateAt = (date: string): string => {
         const dateFormat = new Date(date)
         const monthString = dateFormat.toLocaleString('ENG', { month: 'short' })

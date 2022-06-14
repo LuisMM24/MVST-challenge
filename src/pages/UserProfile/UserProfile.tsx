@@ -23,7 +23,7 @@ const UserProfile: React.FC = () => {
                     <UserNavCarousell />
                     <hr />
                     <Routes>
-                        <Route path="/repositories" element={<UserRepositories />} />
+                        <Route path="*/repositories" element={<UserRepositories />} />
                         <Route path="*" element={<UserRepositories />} />
                     </Routes>
                 </section>
