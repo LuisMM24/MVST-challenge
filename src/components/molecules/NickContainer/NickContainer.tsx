@@ -2,9 +2,9 @@ import React from 'react'
 import "./NickContainer.css"
 
 interface Props {
-    avatar: string;
-    nickName: string;
-    fullName: string;
+    avatar: string | undefined;
+    nickName: string | undefined;
+    fullName: string | undefined;
 
 }
 

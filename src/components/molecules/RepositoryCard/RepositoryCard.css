@@ -12,7 +12,7 @@
 .repoTitleWrapper{
     display:flex;
     align-items: center;
-    gap:1.5em; 
+    gap:1em; 
 }
 .repoTitleWrapper .repoTitle{
     color:#71b6e6;
@@ -24,7 +24,7 @@
 }
 .repoTitleWrapper 
 .repoPrivacyText{
-    padding:0.25em;
+    padding:0.25em 0.5em;
     font-size: 0.70rem;
     border-radius:2em;
     background-color: inherit;

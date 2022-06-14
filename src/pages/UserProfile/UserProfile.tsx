@@ -5,6 +5,7 @@ import UserNavCarousell from '../../components/organism/UserNavCarousell/UserNav
 // components
 import UserPersonalInfo from '../../components/organism/UserPersonalInfo/UserPersonalInfo'
 import UserRepositories from '../../components/organism/UserRepositories/UserRepositories'
+import UserProfileProvider from '../../context/UserProfileProvider'
 
 // styles
 import "./UserProfile.css"
@@ -12,18 +13,21 @@ import "./UserProfile.css"
 const UserProfile: React.FC = () => {
     return (
         <div className='AppBodySection'>
-            <section className='userPersonalInfoSection'>
-                <UserPersonalInfo />
-            </section>
-            <section className='UserNavWrapper'>
-                <UserNavCarousell />
-                <hr />
-                <Routes>
-                    <Route path="/repositories" element={<UserRepositories />} />
-                    <Route path="/" element={<UserRepositories />} />
-                </Routes>
-            </section>
+            <UserProfileProvider>
+                <section className='userPersonalInfoSection'>
 
+                    <UserPersonalInfo />
+                </section>
+
+                <section className='UserNavWrapper'>
+                    <UserNavCarousell />
+                    <hr />
+                    <Routes>
+                        <Route path="/repositories" element={<UserRepositories />} />
+                        <Route path="/" element={<UserRepositories />} />
+                    </Routes>
+                </section>
+            </UserProfileProvider>
         </div>
     )
 }
