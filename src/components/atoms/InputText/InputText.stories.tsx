@@ -1,5 +1,5 @@
 // types
-import { ComponentStory, ComponentMeta, Story } from "@storybook/react";
+import { ComponentMeta, Story } from "@storybook/react";
 // component
 import InputText, { Props } from "./InputText";
 import { useState } from "@storybook/addons";

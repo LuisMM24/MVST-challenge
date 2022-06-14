@@ -6,6 +6,7 @@ import "./UserRepositories.css"
 // icons
 import bookIcon from "../../../assets/img/book.svg"
 import InputText from '../../atoms/InputText/InputText'
+import RepositoryCard from '../../molecules/RepositoryCard/RepositoryCard'
 
 const UserRepositories: React.FC = () => {
     const [inputSearchValue, setInputSearchValue] = useState<string>("")
@@ -14,6 +15,7 @@ const UserRepositories: React.FC = () => {
     ) => {
         setInputSearchValue(e.target.value)
     }
+
     return (
         <article>
             <div className='manageReposWrapper'>
@@ -29,7 +31,14 @@ const UserRepositories: React.FC = () => {
                     />
                 </div>
             </div>
-
+            <section>
+                <RepositoryCard
+                    isPrivateRepo
+                    language='Javascript'
+                    name='MVC'
+                    updateAt='2021-12-13T08:32:29Z'
+                />
+            </section>
         </article>
     )
 }

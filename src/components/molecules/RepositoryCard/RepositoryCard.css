@@ -1,0 +1,73 @@
+.repoCardWrapper{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.repoInformationWrapper{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+}
+.repoInformationWrapper 
+.repoTitleWrapper{
+    display:flex;
+    align-items: center;
+    gap:1.5em; 
+}
+.repoTitleWrapper .repoTitle{
+    color:#71b6e6;
+    cursor:pointer;
+}
+.repoTitle:hover{
+    text-decoration: underline;
+    text-decoration-color: #71b6e6;
+}
+.repoTitleWrapper 
+.repoPrivacyText{
+    padding:0.25em;
+    font-size: 0.70rem;
+    border-radius:2em;
+    background-color: inherit;
+    border: 1px solid #30363d;
+}
+
+.repoLanguageWrapper{
+    display:flex;
+    gap:1em;
+}
+
+.repoLanguage::before{
+    content:"";
+    background-color: yellow;
+    width:30px;
+    height: 30px;
+    border-radius: 5em;
+}
+
+.starWrapper{
+    border-radius:0.5em;
+}
+
+.starWrapper .starButton{
+    display: flex;
+    align-items: center;
+    border-radius:0.5em;
+    gap:0.25em;
+    padding:0.25em;
+    background-color:#21262d;
+    border:1px solid #373b42;
+}
+
+.starWrapper .starButton:hover{
+    background-color:#434d5a;
+    border-color: #5d636f;
+}
+.starWrapper .starButton img{
+    width:1.5rem;
+}
+
+@media screen and (max-width:450px) {
+    .repoUpdateAt{
+        display:none;
+    }
+}
