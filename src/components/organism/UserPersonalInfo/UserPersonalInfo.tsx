@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 // context
-import { UserProfileContext } from '../../../context/UserProfileProvider'
+import { UserProfileContext } from '../../../context/UserProfileContext'
 // components
 import PrimaryButton from '../../atoms/PrimaryButton/PrimaryButton'
 import NickContainer from '../../molecules/NickContainer/NickContainer'

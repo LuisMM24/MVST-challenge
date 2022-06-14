@@ -5,7 +5,7 @@ import UserNavCarousell from '../../components/organism/UserNavCarousell/UserNav
 // components
 import UserPersonalInfo from '../../components/organism/UserPersonalInfo/UserPersonalInfo'
 import UserRepositories from '../../components/organism/UserRepositories/UserRepositories'
-import UserProfileProvider from '../../context/UserProfileProvider'
+import UserProfileProvider from '../../context/UserProfileContext'
 
 // styles
 import "./UserProfile.css"
