@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 // react debounce input
 import debounce from "lodash.debounce"
 // components
@@ -16,9 +16,9 @@ import bookIcon from "../../../assets/img/book.svg"
 
 const UserRepositories: React.FC = () => {
     /* User context */
-    const userProfile = useContext(UserProfileContext)
+    const profileContext = useContext(UserProfileContext)
     /* Custom hook  */
-    const [repos, isLoading, error] = useFetchUserProfile<IUserRepository[]>(`/${userProfile?.login}/repos`)
+    const [repos, isLoading, error] = useFetchUserProfile<IUserRepository[]>(`/${profileContext?.userProfile?.login}/repos`)
     /* State to filter repos */
     const [filteredRepos, setFilteredRepos] = useState<IUserRepository[] | null>(null)
 

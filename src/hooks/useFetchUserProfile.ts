@@ -7,7 +7,6 @@ const useFetchUserProfile = <T>(userEndpoint: string): [
     boolean,
     string | null,
 ] => {
-
     const [userProfileItems, setUserProfileItems] = useState<T | null>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [error, setError] = useState<string | null>(null)
@@ -19,7 +18,11 @@ const useFetchUserProfile = <T>(userEndpoint: string): [
             setError(null)
             /* try catch to prevent errors */
             try {
-                const res = await fetch(`https://api.github.com/users${userEndpoint}`)
+                const res = await fetch(`https://api.github.com/users${userEndpoint}`, {
+                    headers: {
+                        Authorization: `token ${process.env.REACT_APP_APITOKEN}`
+                    }
+                })
                 if (!res.ok) throw new Error("Failed to fetch to API")
                 setUserProfileItems(await res.json())
             } catch (e) {

@@ -10,26 +10,30 @@ import "./UserPersonalInfo.css"
 import usersIcon from "../../../assets/img/users.svg"
 import locationIcon from "../../../assets/img/location.svg"
 const UserPersonalInfo: React.FC = () => {
-    const userProfile = useContext(UserProfileContext)
+    const profileContext = useContext(UserProfileContext)
     return (
         <>
+            {
+                profileContext?.isLoading && <h1>Loading</h1>
+            }
+
             <NickContainer
-                avatar={userProfile?.avatar_url}
-                fullName={userProfile?.name}
-                nickName={userProfile?.login}
+                avatar={profileContext?.userProfile?.avatar_url}
+                fullName={profileContext?.userProfile?.name}
+                nickName={profileContext?.userProfile?.login}
             />
-            <p className='userBio'>{userProfile?.bio}</p>
+            <p className='userBio'>{profileContext?.userProfile?.bio}</p>
             <PrimaryButton type='button' className='followUserBtn'>Follow</PrimaryButton>
             <div className='followersFollowingContainer'>
                 <div className='followersWrapper'>
                     <img src={usersIcon} alt="users" />
-                    <p>{userProfile?.followers} <span className='grayText'>followers</span></p>
+                    <p>{profileContext?.userProfile?.followers} <span className='grayText'>followers</span></p>
                 </div>
-                ◦ <p>{userProfile?.following} <span className='grayText'>following</span></p>
+                ◦ <p>{profileContext?.userProfile?.following} <span className='grayText'>following</span></p>
             </div>
-            {userProfile?.location && (
+            {profileContext?.userProfile?.location && (
                 <div className='locationWrapper'>
-                    <img src={locationIcon} alt="location" /> {userProfile?.location}
+                    <img src={locationIcon} alt="location" /> {profileContext?.userProfile?.location}
                 </div>
             )}
 

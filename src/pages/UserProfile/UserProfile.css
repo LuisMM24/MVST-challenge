@@ -9,6 +9,9 @@
     margin-top: 0;
    border:1px solid var(--separator-bg-color);
   }
+  .errorMessage{
+    text-align: center; 
+  }
 
   @media screen and (min-width:768px) {
     .AppBodySection{
@@ -26,3 +29,4 @@
     }
 
   }
+ 
