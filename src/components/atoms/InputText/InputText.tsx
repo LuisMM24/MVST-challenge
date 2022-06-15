@@ -5,7 +5,7 @@ export interface Props {
     placeholder?: string;
     className?: string;
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    value: string;
+    value?: string;
 }
 
 const InputText: React.FC<Props> = ({

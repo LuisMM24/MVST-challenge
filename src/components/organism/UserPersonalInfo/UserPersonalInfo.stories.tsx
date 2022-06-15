@@ -1,5 +1,6 @@
 // types
-import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import UserProfileProvider from "../../../context/UserProfileContext";
 // component
 import UserPersonalInfo from "./UserPersonalInfo";
 
@@ -10,6 +11,11 @@ const componentInfo = {
 
 export default componentInfo;
 
-const Template: ComponentStory<typeof UserPersonalInfo> = (args) => <UserPersonalInfo {...args} />;
+const Template: ComponentStory<typeof UserPersonalInfo> = (args) => {
+    return <UserProfileProvider>
+        <UserPersonalInfo {...args} />
+    </UserProfileProvider>;
+}
+
 
 export const UserPersonalInfoExample = Template.bind({});
