@@ -9,3 +9,21 @@
     color:white;
     border:1px solid #373b42;
 }
+
+.followersFollowingContainer,.locationWrapper{
+    font-size: 0.85rem;
+    display:flex;
+    gap:0.5em;
+    justify-content: flex-start;
+}
+.followersFollowingContainer img {
+    width:1rem;   
+}
+.followersWrapper{
+    display:flex;
+    gap:0.25em;
+}
+
+.locationWrapper img{
+    width:1rem;
+}
