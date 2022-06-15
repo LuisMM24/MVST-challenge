@@ -28,7 +28,7 @@ npm run start
 
 ```
 
-##How to execute the test suite
+## How to execute the test suite
 
 ```
 /* Run all tests */
