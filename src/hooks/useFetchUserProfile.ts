@@ -34,6 +34,7 @@ const useFetchUserProfile = <T>(userEndpoint: string): [
                 setError("Unexpected error")
 
             } finally {
+                /* Finally finish loading state*/
                 setIsLoading(false)
             }
 

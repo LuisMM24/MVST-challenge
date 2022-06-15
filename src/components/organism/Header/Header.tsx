@@ -9,10 +9,11 @@ import "./Header.css"
 import InputText from '../../atoms/InputText/InputText'
 // github icon
 import githubIcon from "../../../assets/img/github.svg"
+
 const Header: React.FC = () => {
-
+    /* useNavigate to redirect */
     const navigate = useNavigate()
-
+    /* We get the input value and redirect to search the user wrote*/
     const searchUser = (e: React.ChangeEvent<HTMLInputElement>) => {
         navigate(`/${e.target.value}`)
     }

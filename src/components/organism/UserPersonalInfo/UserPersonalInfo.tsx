@@ -9,8 +9,11 @@ import "./UserPersonalInfo.css"
 // icons
 import usersIcon from "../../../assets/img/users.svg"
 import locationIcon from "../../../assets/img/location.svg"
+
 const UserPersonalInfo: React.FC = () => {
+
     const profileContext = useContext(UserProfileContext)
+
     return (
         <>
             <NickContainer
