@@ -18,6 +18,7 @@
 .repoTitleWrapper .repoTitle{
     color:#71b6e6;
     cursor:pointer;
+    word-wrap: break-word;
 }
 .repoTitle:hover{
     text-decoration: underline;

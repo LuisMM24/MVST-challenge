@@ -5,20 +5,20 @@ import { MemoryRouter } from "react-router-dom";
 // context provider
 import UserProfileProvider from "../../../context/UserProfileContext";
 // component
-import UserPersonalInfo from "./UserPersonalInfo";
+import UserRepositories from "./UserRepositories";
 
 const componentInfo = {
-    title: "Design System/organism/User personal information",
-    component: UserPersonalInfo,
-} as ComponentMeta<typeof UserPersonalInfo>;
+    title: "Design System/organism/User Repositories",
+    component: UserRepositories,
+} as ComponentMeta<typeof UserRepositories>;
 
 export default componentInfo;
 
-const Template: ComponentStory<typeof UserPersonalInfo> = (args) => {
+const Template: ComponentStory<typeof UserRepositories> = (args) => {
     return (
         <MemoryRouter>
             <UserProfileProvider>
-                <UserPersonalInfo {...args} />
+                <UserRepositories {...args} />
             </UserProfileProvider>
         </MemoryRouter>
 
@@ -26,4 +26,4 @@ const Template: ComponentStory<typeof UserPersonalInfo> = (args) => {
 }
 
 
-export const UserPersonalInfoExample = Template.bind({});
+export const UserRepositoriesExample = Template.bind({});

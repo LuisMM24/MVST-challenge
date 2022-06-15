@@ -1,5 +1,6 @@
 // types
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import { MemoryRouter } from "react-router-dom";
 // component
 import Header from "./Header";
 
@@ -10,6 +11,11 @@ const componentInfo = {
 
 export default componentInfo;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: ComponentStory<typeof Header> = (args) => (
+    <MemoryRouter>
+        <Header {...args} />
+    </MemoryRouter>
+)
+
 
 export const HeaderExample = Template.bind({});

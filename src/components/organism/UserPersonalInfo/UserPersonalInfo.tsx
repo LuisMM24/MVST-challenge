@@ -13,10 +13,6 @@ const UserPersonalInfo: React.FC = () => {
     const profileContext = useContext(UserProfileContext)
     return (
         <>
-            {
-                profileContext?.isLoading && <h1>Loading</h1>
-            }
-
             <NickContainer
                 avatar={profileContext?.userProfile?.avatar_url}
                 fullName={profileContext?.userProfile?.name}

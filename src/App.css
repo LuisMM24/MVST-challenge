@@ -27,7 +27,9 @@ header img{
 
 
 /* GLOBAL CLASSES */
-
+.centerText{
+  text-align: center;
+}
 .grayText{
   color:var(--secondary-text-color)
 }

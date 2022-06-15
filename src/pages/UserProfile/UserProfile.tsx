@@ -11,7 +11,9 @@ import "./UserProfile.css"
 
 const UserProfile: React.FC = () => {
     const profileContext = useContext(UserProfileContext)
-    if (profileContext?.error) return <h1 className='errorMessage'>User not found</h1>
+    /* states of context to get controlled the re-renders*/
+    if (profileContext?.error) return <h1 className='centerText'>User not found</h1>
+    if (profileContext?.isLoading) return <h1 className='centerText'>Loading</h1>
     return (
         <div className='AppBodySection'>
             <section className='userPersonalInfoSection'>
