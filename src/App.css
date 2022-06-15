@@ -21,9 +21,6 @@ header{
   background-color: var(--header-bg-color);
   padding:1em;
 }
-header img{
-  margin:0 auto;
-}
 
 
 /* GLOBAL CLASSES */
