@@ -3,7 +3,7 @@
 This project was done for a technical challenge to MVST.
 It's based in github, basically you can filter the repositories of the current user profile
 
-- Atomic design
+> Atomic design
 
 This project was done using an atomic design, which components folder have specific structure:
 
@@ -17,7 +17,7 @@ This project was done using an atomic design, which components folder have speci
 
 ## How to run the project
 
-- This project is deployed in:
+> This project is deployed in:
 
 ```
 /* Install the dependencies */
