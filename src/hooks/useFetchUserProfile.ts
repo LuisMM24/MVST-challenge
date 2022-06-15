@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 
 
-
+/* In this custom hook we're using a generic type */
+/* This generic type normally will receive a IUserProfile interface or IUserRepository interface */
 const useFetchUserProfile = <T>(userEndpoint: string): [
     T | null,
     boolean,
