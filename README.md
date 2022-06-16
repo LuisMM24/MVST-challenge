@@ -17,25 +17,47 @@ This project was done using an atomic design, which components folder have speci
 
 ## How to run the project
 
-> This project is deployed in:
+> This project has been deployed in Netlify: <a href="https://62ab0083fbd3a9681e0ccf33--imaginative-granita-e4a4e5.netlify.app/">Press here to visit it</a>
 
 ```
 /* Install the dependencies */
+
 npm install
 
 /* Run the project*/
+
 npm run start
 
+/* Run storybooks */
+
+npm run storybook
+
 ```
+
+
 
 ## How to execute the test suite
 
 ```
 /* Run all tests */
+
 npm run test
 
 /* Run testing coverage */
-npm run test--coverage
+
+npm run coverage
 
 ```
 
+## Future improvements
+
+## Feedback
+
+In my opinion, this challenge helped me to:
+
+- Understand better how the RTL (React-testing-library) works
+- Improve my knowledge of atomic design and abstraction of components.
+
+To do this challenge you need to know the principles and basics of React and the API's REST
+
+Thanks to MVST for giving me the opportunity to do this challenge, it was an incredible experience.
