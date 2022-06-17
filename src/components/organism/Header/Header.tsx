@@ -22,7 +22,7 @@ const Header: React.FC = () => {
     return (
         <header className='header'>
             <img src={githubIcon} alt="Github" />
-            <InputText placeholder='Search users' handleChange={debounceSearch} />
+            <InputText testId="inputSearchUser" placeholder='Search users' handleChange={debounceSearch} />
         </header>
     )
 }
