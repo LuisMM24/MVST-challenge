@@ -17,9 +17,9 @@ This project was done using an atomic design, which components folder have speci
 
     .
     ├── components                  # This folder stores all the components.
-    │   ├── atoms                   # Small components, like tags, title or descriptions
-    │   ├── molecules               # Containers or wrappers, in this case will be the card component.
-    │   └── organism                # These components are sections of the page , in this case will be the ScrollBox
+    │   ├── atoms                   # Small components, like buttons or inputs.
+    │   ├── molecules               # Containers or wrappers
+    │   └── organism                # These components are sections of the page
     └── ...
 
 
