@@ -1,35 +1,35 @@
-.nickContainer{
-    padding:1em;
-    display:flex;
-    align-items: center;
-    gap:1em;
+.nickContainer {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
-.avatarWrapper{
-    aspect-ratio: 1/1;
-    max-width:15%;
-    border-radius: 100px;
-    overflow: hidden;
+.avatarWrapper {
+  aspect-ratio: 1/1;
+  max-width: 15%;
+  border-radius: 100px;
+  overflow: hidden;
 }
-.avatarWrapper img{
-    object-fit: contain;
-    width:100%;
+.avatarWrapper img {
+  object-fit: contain;
+  width: 100%;
 }
-.userNamesWrapper{
-    font-size:1.5rem;
-    display:flex;
-    flex-direction: column;
+.userNamesWrapper {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-@media screen and (min-width:768px) {
-    .nickContainer{
-        flex-direction: column;
-    }
-    .userNamesWrapper{
-        width:100%;
-        text-align: left;
-    }
-    .avatarWrapper{
-        border-radius: 100%;
-        max-width:100%;
-    }
+@media screen and (min-width: 768px) {
+  .nickContainer {
+    flex-direction: column;
+  }
+  .userNamesWrapper {
+    width: 100%;
+    text-align: left;
+  }
+  .avatarWrapper {
+    border-radius: 100%;
+    max-width: 100%;
+  }
 }

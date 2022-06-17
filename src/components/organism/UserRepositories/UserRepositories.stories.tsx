@@ -8,22 +8,20 @@ import UserProfileProvider from "../../../context/UserProfileContext";
 import UserRepositories from "./UserRepositories";
 
 const componentInfo = {
-    title: "Design System/organism/User Repositories",
-    component: UserRepositories,
+  title: "Design System/organism/User Repositories",
+  component: UserRepositories,
 } as ComponentMeta<typeof UserRepositories>;
 
 export default componentInfo;
 
 const Template: ComponentStory<typeof UserRepositories> = (args) => {
-    return (
-        <MemoryRouter>
-            <UserProfileProvider>
-                <UserRepositories {...args} />
-            </UserProfileProvider>
-        </MemoryRouter>
-
-    );
-}
-
+  return (
+    <MemoryRouter>
+      <UserProfileProvider>
+        <UserRepositories {...args} />
+      </UserProfileProvider>
+    </MemoryRouter>
+  );
+};
 
 export const UserRepositoriesExample = Template.bind({});

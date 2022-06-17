@@ -1,32 +1,29 @@
+.AppBodySection {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 1em;
+}
 
-.AppBodySection{
-    max-width: 1250px;
-    margin:0 auto;
-    padding:1em;
-  }
-  
-  hr{
-    margin-top: 0;
-   border:1px solid var(--separator-bg-color);
-  }
-  .errorMessage{
-    text-align: center; 
-  }
+hr {
+  margin-top: 0;
+  border: 1px solid var(--separator-bg-color);
+}
+.errorMessage {
+  text-align: center;
+}
 
-  @media screen and (min-width:768px) {
-    .AppBodySection{
-        display:flex;
-        gap:1em;
-        padding:2em;
-    }
-    .userPersonalInfoSection{
-        min-width:300px;
-        width: 300px;
-    }
-    .UserNavWrapper{
-        overflow: auto;
-        width:100%;
-    }
-
+@media screen and (min-width: 768px) {
+  .AppBodySection {
+    display: flex;
+    gap: 1em;
+    padding: 2em;
   }
- 
+  .userPersonalInfoSection {
+    min-width: 300px;
+    width: 300px;
+  }
+  .UserNavWrapper {
+    overflow: auto;
+    width: 100%;
+  }
+}

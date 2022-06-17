@@ -8,22 +8,20 @@ import UserProfileProvider from "../../../context/UserProfileContext";
 import UserPersonalInfo from "./UserPersonalInfo";
 
 const componentInfo = {
-    title: "Design System/organism/User personal information",
-    component: UserPersonalInfo,
+  title: "Design System/organism/User personal information",
+  component: UserPersonalInfo,
 } as ComponentMeta<typeof UserPersonalInfo>;
 
 export default componentInfo;
 
 const Template: ComponentStory<typeof UserPersonalInfo> = (args) => {
-    return (
-        <MemoryRouter>
-            <UserProfileProvider>
-                <UserPersonalInfo {...args} />
-            </UserProfileProvider>
-        </MemoryRouter>
-
-    );
-}
-
+  return (
+    <MemoryRouter>
+      <UserProfileProvider>
+        <UserPersonalInfo {...args} />
+      </UserProfileProvider>
+    </MemoryRouter>
+  );
+};
 
 export const UserPersonalInfoExample = Template.bind({});

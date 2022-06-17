@@ -1,29 +1,29 @@
-
-.userBio{
-    font-size:0.8rem;
+.userBio {
+  font-size: 0.8rem;
 }
 
-.followUserBtn{
-    margin: 1em 0;
-    background-color:#21262d;
-    color:white;
-    border:1px solid #373b42;
+.followUserBtn {
+  margin: 1em 0;
+  background-color: #21262d;
+  color: white;
+  border: 1px solid #373b42;
 }
 
-.followersFollowingContainer,.locationWrapper{
-    font-size: 0.85rem;
-    display:flex;
-    gap:0.5em;
-    justify-content: flex-start;
+.followersFollowingContainer,
+.locationWrapper {
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.5em;
+  justify-content: flex-start;
 }
 .followersFollowingContainer img {
-    width:1rem;   
+  width: 1rem;
 }
-.followersWrapper{
-    display:flex;
-    gap:0.25em;
+.followersWrapper {
+  display: flex;
+  gap: 0.25em;
 }
 
-.locationWrapper img{
-    width:1rem;
+.locationWrapper img {
+  width: 1rem;
 }
