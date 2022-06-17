@@ -3,7 +3,7 @@
 This project was done for a technical challenge to MVST.
 It's based in github, basically you can filter the repositories of the current user profile
 
-Project built with:
+> Project built with:
 
 - React
 - React-testing-library
@@ -49,11 +49,11 @@ npm run storybook
 ```
 /* Run all tests */
 
-npm run test
+npm run test src/
 
 /* Run testing coverage */
 
-npm run coverage
+npm run coverage src/
 
 ```
 
@@ -61,6 +61,7 @@ npm run coverage
 
 - Improve the query system with Graphql using the github v4 API
 - You should see the entire user profile, navigate between the overview, repos, projects, packages, etc.
+- Integration testing
 - Improve the filter system, you can filter by lastest commited projects, by language, or sort by name.
 
 ## Feedback
