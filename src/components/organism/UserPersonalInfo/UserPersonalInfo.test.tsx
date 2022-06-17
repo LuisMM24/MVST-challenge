@@ -7,6 +7,8 @@ import UserPersonalInfo from "./UserPersonalInfo";
 import { MemoryRouter } from "react-router-dom";
 // context
 import { UserProfileContext } from "../../../context/UserProfileContext";
+// mocks
+import userMock from "../../../mocks/UserMock";
 
 
 
@@ -19,18 +21,9 @@ describe("UserPersonalInfo component", () => {
     })
 
     it("should render the profile when context it's working", () => {
-        const mockResponse = {
-            avatar_url: "doesn't work",
-            bio: "Hi, my name is Luis, im 22 years old.\r\nI'm a front end developer and I love playing the guitar and videogames.",
-            followers: 4,
-            following: 8,
-            repos_url: "fail",
-            location: "España, Castilla la mancha",
-            login: "LuisMM24",
-            name: "Luis Molina",
-        }
+
         render(<MemoryRouter>
-            <UserProfileContext.Provider value={{ userProfile: mockResponse, isLoading: false, error: null }}>
+            <UserProfileContext.Provider value={{ userProfile: userMock, isLoading: false, error: null }}>
                 <UserPersonalInfo />
             </UserProfileContext.Provider>
         </MemoryRouter>)
