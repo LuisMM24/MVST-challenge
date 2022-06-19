@@ -1,7 +1,8 @@
 # Github Repositories MVST Challenge
 
 This project was done for a technical challenge to MVST.
-It's based in github, basically you can filter the repositories of the current user profile
+It's based in github, basically you can search a specific user to see all the repositories created!
+In this section you'll have a filter to search specific repositories.
 
 > Project built with:
 
