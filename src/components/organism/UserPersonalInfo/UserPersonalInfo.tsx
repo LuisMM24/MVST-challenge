@@ -27,19 +27,18 @@ const UserPersonalInfo: React.FC = () => {
         <div className="followersWrapper">
           <img src={usersIcon} alt="users" />
           <p>
-            {profileContext?.userProfile?.followers}{" "}
+            {profileContext?.userProfile?.followers}
             <span className="grayText">followers</span>
           </p>
         </div>
-        ◦{" "}
         <p>
-          {profileContext?.userProfile?.following}{" "}
+          {profileContext?.userProfile?.following}
           <span className="grayText">following</span>
         </p>
       </div>
       {profileContext?.userProfile?.location && (
         <div className="locationWrapper">
-          <img src={locationIcon} alt="location" />{" "}
+          <img src={locationIcon} alt="location" />
           {profileContext?.userProfile?.location}
         </div>
       )}
